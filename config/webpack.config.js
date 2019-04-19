@@ -11,7 +11,7 @@ module.exports = {
     compress: true, // 自动压缩
     open: true,// 自动打开浏览器
   },
-  mode: 'production',  // 默认有两种模式：生产环境production，开发环境development
+  mode: 'development',  // 默认有两种模式：生产环境production，开发环境development
   entry: './src/main.js', // 入口文件，也就是打包这个js文件
   output: {  // 打包的文件位置
     filename: 'bundle.[hash:8].js', //当js文件更改， [hash]的值会变化，每次build会生成一个新的js文件，[hash:8]，只显示8位的hash值，打包出来当然文件名叫 bundle.js
@@ -60,7 +60,6 @@ module.exports = {
           MiniCssExtractPlugin.loader, // 把样式都抽离成一个单独的css文件
           "css-loader",
           "postcss-loader"//给CSS3语法，比如transfrom加上前缀， 需要新建 postcss.config.js 配置文件，需要引用 autoprefixer 这个插件
-
         ]
       },
       {
